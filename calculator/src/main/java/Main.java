@@ -10,7 +10,7 @@ public class Main {
         List<Double> results = new ArrayList<>();
 
         while(true) {
-            System.out.println("---계산기 프로그램 실행중---");
+            System.out.println("--- 계산기 프로그램 실행중 ---");
 
             // 값을 입력하는게 더 먼저 나와야 논리전개에 안정적임
             System.out.println("a 값을 입력해주세요 : ");
