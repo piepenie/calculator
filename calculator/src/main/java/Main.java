@@ -9,7 +9,7 @@ public class Main {
         // 해당 results 는 결과 값들을 보관하는 창고.
         List<Double> results = new ArrayList<>();
 
-        while(true){
+        while(true) {
             System.out.println("---계산기 프로그램 실행중---");
 
             // 값을 입력하는게 더 먼저 나와야 논리전개에 안정적임
@@ -26,7 +26,7 @@ public class Main {
             // boolean 계산기 연산 확인 스위치 >> 성공 여부에 따라 해당 결과값 출력 여부를 결정
             boolean isSuccess = true;
 
-            switch (operator){
+            switch(operator) {
                 case "+":
                     result = a + b;
                     break;
@@ -53,14 +53,25 @@ public class Main {
                     break;
             }
 
-            if(isSuccess){
+            if(isSuccess) {
                 System.out.println("결과 : " + result);
                 results.add(result);
             }
 
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 / 아무 키나 누르면 넘어감): ");
+            String inquiry = sc.next();
+            if(inquiry.equals("inquiry")) {
+                System.out.println("--- 저장값 리스트 ---");
+                if(results.isEmpty()){
+                    System.out.println("저장값이 없습니다");
+                } else {
+                    System.out.println(results);
+                }
+            }
+
             System.out.println("계산을 계속 진행하시겠습니까? (exit 입력 시 종료 / 아무 키나 누르면 계속): ");
             String exit = sc.next();
-            if (exit.equals("exit")) {
+            if(exit.equals("exit")) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }
