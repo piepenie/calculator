@@ -58,7 +58,20 @@ public class Main {
                 results.add(result);
             }
 
-            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 / 아무 키나 누르면 넘어감): ");
+            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제 / 아무 키나 입력시 넘어감): ");
+            String remove = sc.next();
+            if(remove.equals("remove")) {
+                //!results.isEmpty >> (결과값 창고가 비어있다면)의 전체 부정 ! 을 해서 안비어있다면, 으로 만듬.
+                if(!results.isEmpty()){
+                    // index : 0 << 가장 먼저 저장된 연산 결과값.
+                    results.remove(0);
+                    System.out.println("가장 첫 번째 연산 결과가 삭제 되었습니다.");
+                } else {
+                    System.out.println("삭제할 결과가 없습니다.");
+                }
+            }
+
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회 / 아무 키나 입력시 넘어감): ");
             String inquiry = sc.next();
             if(inquiry.equals("inquiry")) {
                 System.out.println("--- 저장값 리스트 ---");
@@ -69,13 +82,13 @@ public class Main {
                 }
             }
 
-            System.out.println("계산을 계속 진행하시겠습니까? (exit 입력 시 종료 / 아무 키나 누르면 계속): ");
+            System.out.println("계산을 계속 진행하시겠습니까? (exit 입력 시 종료 / 아무 키나 입력시 계속): ");
             String exit = sc.next();
             if(exit.equals("exit")) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }
         }
-
+        sc.close();
     }
 }
