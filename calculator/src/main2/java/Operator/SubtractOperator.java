@@ -1,4 +1,6 @@
-public class SubtractOperator implements Operator{
+package Operator;
+
+public class SubtractOperator implements Operator {
     @Override
     public double operate(double a, double b) {
         return a - b;

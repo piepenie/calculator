@@ -1,4 +1,6 @@
-public class ModOperator implements Operator{
+package Operator;
+
+public class ModOperator implements Operator {
     @Override
     public double operate (double a, double b) {
         if(b == 0) {
