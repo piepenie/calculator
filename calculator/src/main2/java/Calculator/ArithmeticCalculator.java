@@ -1,5 +1,7 @@
 package Calculator;
 
+import Operator.*;
+
 public class ArithmeticCalculator extends Calculator{
     public AddOperator addOperator;
     public SubtractOperator subtractOperator;
